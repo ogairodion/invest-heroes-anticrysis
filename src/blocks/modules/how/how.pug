@@ -1,0 +1,67 @@
+- 
+    const how_items_1 = [
+        {
+            number: '1',
+            text: 'Мы высылаем Вам 1 - 2 мини учебника',
+            img: '1',
+        },
+        {
+            number: '2',
+            text: 'Проводим 2 - 3 вебинара / видео лекции',
+            img: '2',
+        },
+        {
+            number: '3',
+            text: 'Ведущий дает 1 домашнее задание на следующую неделю',
+            img: '3',
+        },
+        {
+            number: '4',
+            text: 'В конце каждой недели мы присылаем вам тест',
+            img: '4',
+        },
+    ];
+
+    const how_items_2 = [
+        {
+            text: 'Работает чат учеников с командой Invest Heroes',
+            img: '5',
+        },
+        {
+            text: 'Проводим 2 - 3 вебинара / видео лекции',
+            img: '6',
+        },
+        {
+            text: 'В лекциях идет разбор ДЗ + видео решебник',
+            description: 'для тарифного плана "Персональный подход"',
+            img: '7',
+        },
+    ];
+
+section.how
+    .how__back.how__back-top    
+        img(src="img/svg/how/back-top.svg", alt="")
+    .how__back.how__back-bottom
+        img(src="img/svg/how/back-bottom.svg", alt="")
+    .l-default
+        h2.how__title.title.title--h2 Как проходит обучение
+        .how__subtitle Курс состоит из 5 блоков, каждый из которых длится 1 неделю
+        .how__text Еженедельно
+        .how__items-wrapper
+            .how__items
+                each how_item_1 in how_items_1
+                    .how__item
+                        .how__item-number= how_item_1.number 
+                        .how__item-text= how_item_1.text 
+                        .how__item-img
+                            +webp(['how/' + how_item_1.img], 'png', 'lazy') 
+        .how__text Еженедельно
+        .how__bottom-wrapper.swiper-container
+            .how__bottom.swiper-wrapper
+                each how_item_2 in how_items_2
+                    .how__bottom-item.swiper-slide
+                        .how__bottom-img
+                            +webp(['how/' + how_item_2.img], 'png', 'lazy') 
+                        .how__bottom-text= how_item_2.text 
+                        .how__bottom-description= how_item_2.description 
+                        

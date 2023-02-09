@@ -1,0 +1,22 @@
+include prices_data.pug
+    
+section.prices#prices
+    .l-default 
+        h2.prices__title.title.title--h2 Программы обучения
+        .prices__items
+            each price in prices
+                .prices__item
+                    .prices__item-top
+                        .prices__item-img
+                            +webp(['prices/' + price.img], 'png')
+                        .prices__item-title= price.title 
+                    .prices__item-content
+                        each point in price.points
+                            .prices__item-point
+                                .prices__item-bold= point.title     
+                                .prices__item-list
+                                    each price_list_item in point.list
+                                        .prices__item-text(class=price_list_item.class)= price_list_item.text
+                        .prices__item-price= price.price
+                        .prices__item-price--old= price.priceOld
+                        a.prices__item-btn.btn.btn--blue(href=price.href) Приобрести

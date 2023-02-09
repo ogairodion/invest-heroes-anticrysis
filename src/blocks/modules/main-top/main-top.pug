@@ -1,0 +1,46 @@
+section.main-top
+    .main-top__back.main-top__back--top
+        img(src="img/svg/main-top/back-top.svg", alt="")
+    .main-top__back.main-top__back--bottom
+        img(src="img/svg/main-top/back-bottom.svg", alt="")
+    .l-default 
+        .main-top__info
+            h1.main-top__title.title.title--h1 КУРС: <span>Антикризис 1.0</span>
+            .main-top__subtitle Как научиться распределять свои сбережения
+            .main-top__text в условиях кризиса и высокой неопределённости
+            .main-top__bottom
+                a.main-top__btn.btn.btn--blue.scroll(href="#prices")
+                    .btn__text Участвовать
+                    .btn__icon
+                        img.lazy(data-src="img/svg/like.svg", alt="")
+                .main-top__date
+                    .main-top__date-text Будет проходить в онлайне
+                    .main-top__date-days Старт / 6 июня
+        .main-top__speakers.swiper-container
+            .swiper-wrapper
+                .main-top__speaker.swiper-slide
+                    .main-top__speaker-img
+                        +webp(['speakers/pirogov'], 'jpg', 'lazy')
+                    .main-top__speaker-name Сергей Пирогов
+                    .main-top__speaker-position CEO Invest Heroes
+                    .main-top__speaker-description Главный управляющий IH будет проводить эфиры на марафоне
+                .main-top__speaker.swiper-slide
+                    .main-top__speaker-img
+                        +webp(['speakers/sayganov'], 'jpg', 'lazy')
+                    .main-top__speaker-name Александр Сайганов
+                    .main-top__speaker-position Head of Research
+                    .main-top__speaker-description Вместе с командой аналитиков ответит на ваши вопросы
+                .main-top__speaker.swiper-slide
+                    .main-top__speaker-img
+                        +webp(['speakers/dubrovina'], 'jpg', 'lazy')
+                    .main-top__speaker-name Светлана Дубровина
+                    .main-top__speaker-position Senior Analyst
+                    .main-top__speaker-description Lorem ipsum dolor sit amet, consectetuer adipiscing elit/ Aenean commodo ligula
+                .main-top__speaker.swiper-slide
+                    .main-top__speaker-img
+                        +webp(['speakers/novichkov'], 'jpg', 'lazy')
+                    .main-top__speaker-name Дмитрий Новичков
+                    .main-top__speaker-position Senior Analyst
+                    .main-top__speaker-description Lorem ipsum dolor sit amet, consectetuer adipiscing elit/ Aenean commodo ligula
+        .main-top__dots     
+            img.lazy(data-src="img/svg/dots.svg", alt="")

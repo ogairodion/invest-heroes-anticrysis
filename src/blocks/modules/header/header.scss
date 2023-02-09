@@ -1,0 +1,25 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z('header');
+    width: 100%;
+    padding-top: 47px;
+    &__logo {
+        height: 47px;
+
+        @media screen and (max-width: 600px) {
+            height: 35px;
+        }
+
+        @media screen and (max-width: 369px) {
+            height: 24px;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            min-height: 100%;
+        }
+    }
+}
